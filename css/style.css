@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url(../fonts/Philosopher-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+body {
+	background-image: url('/image/soaring_dragon_bg.jpg');
+	background-attachment: fixed;
+	font-family: 'Montserrat';
+}
+
+
+/* Header */
+.center {
+	width: 98%;
+	margin: auto;
+}
+
+.container {
+	background-color: #000000;
+	color: #ffffff;
+	margin: 10px auto;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header img {
+	width: 70px;
+	height: auto;
+}
+
+.header-text {
+	margin: 15px 5px;
+}
+
+.header-text h1 {
+	font-family: 'Philosopher';
+	font-size: 24px;
+	margin: 0;
+}
+
+.header-text h3 {
+	font-size: 12px;
+	margin: 0;
+}
+
+.header-about {
+	display: none;
+}
+
+.header-about a {
+	text-decoration: none;
+	font-family: 'Montserrat';
+	font-size: 20px;
+	color: white;
+}
+
+.header-about a:hover {
+	color: #333333;
+}
+
+@media only screen and (min-width: 768px) {
+	.center {
+		width: 90%;
+	}
+	
+	.container {
+		margin: 20px auto;
+	}
+	
+	header img {
+		width: 100px;
+		margin: 0 20px;
+	}
+	
+	.header-text {
+		margin: 0 0 0 20px;
+	}
+	
+	.header-text h1 {
+		font-size: 36px;
+	}
+	
+	.header-text h3 {
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 2em;
+	}
+	
+	.header-about {
+		display: block;
+		margin-right: 30px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.center {
+		width: 80%;
+	}
+	
+	.header-text h1 {
+		font-size: 45px;
+	}
+	
+	.header-text h3 {
+		font-size: 1.17em;
+	}
+}
+
+
+/* Menu Bar */
+.menu {
+	border: 1px solid black;
+	border-bottom: 0;
+	padding: 5px 0 0;
+	background-color: #333333;
+}
+
+.menu > ul {
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 5px;
+}
+
+.menu li {
+	float: left;
+}
+
+.menu a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.menu a:hover {
+  background-color: #111;
+}
+
+.active {
+	background-color: #ffffff;
+}
+
+li.active a {
+	color: #000000;
+}
+
+li.active a:hover {
+	background-color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+	.menu {
+		padding: 5px 20px 0 20px;
+	}
+	
+	.menu > ul {
+		padding: 0;
+		padding-inline-start: 40px;
+	}
+	
+	.menu a {
+		padding: 14px 16px;
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.menu a {
+		font-size: 16px;
+	}
+}
+
+
+/* Main Content */
+.body-content {
+	width: 100%;
+	display: inline-block;
+	background-color: white;
+	border: 1px solid black;
+	border-top: 0px;
+}
+
+.content {
+	padding: 10px 5px;
+}
+
+.content.main {
+	width: 100%;
+}
+
+.content.main h2 {
+	font-size: 18px;
+}
+
+.content.main h3,
+.content.main h4 {
+	font-size: 14px;
+}
+
+.content.main p {
+	font-size: 12px;
+}
+
+.video-content iframe {
+	width: 100%;
+	height: auto;
+}
+
+.img-container {
+	width: 100%;
+	margin: auto;
+	padding: 5px;
+	background-color: #f5f5f0;
+	text-align: center;
+}
+
+.img-container img {
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
+img.img-manga {
+	width: 150px;
+}
+
+img.img-manhwa {
+	width: 100%;
+}
+
+img.img-manhua {
+	width: 150px;
+}
+
+.img-container span,
+.img-container a {
+	font-size: 10px;
+}
+
+.buttom-sources {
+	margin-top: 10px;
+}
+
+.buttom-sources span,
+.buttom-sources a {
+	font-size: 12px;
+}
+
+.img-about {
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+	.content {
+		padding: 15px 0;
+		margin: 1%;
+	}
+	
+	.content.main {
+		width: 76%;
+		float: left;
+	}
+
+	.content.main h2 {
+		font-size: 1.5em;
+	}
+
+	.content.main h3 {
+		font-size: 1.17em;
+	}
+
+	.content.main h4 {
+		font-size: 1em;
+	}
+
+	.content.main p {
+		font-size: 16px;
+	}
+	
+	.video-content iframe {
+		height: 315px;
+	}
+	
+	img.img-manga {
+		width: 250px;
+	}
+	
+	img.img-manhwa {
+		width: 500px;
+	}
+	
+	img.img-manhua {
+		width: 250px;
+	}
+	
+	.img-container span,
+	.img-container a {
+		font-size: 12px;
+	}
+
+	.buttom-sources span,
+	.buttom-sources a {
+		font-size: 16px;
+	}	
+}
+
+@media only screen and (min-width: 1024px) {
+	.video-content iframe {
+		width: 560px;
+		height: 315px;
+	}
+}
+
+
+/* Side Content */
+.content.side {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.content.side {
+		display: block;
+		width: 20%;
+		height: auto;
+		border: 1px solid black;
+		background-color: lightgray;
+		float: right;
+		padding: 15px;
+		overflow: auto;
+		position: sticky;
+		top: 15px;
+	}
+
+	.content.side h3 {
+		font-size: 14px;
+	}
+
+	.content.side ul {
+		padding-inline-start: 20px;
+	}
+	
+	.content.side a {
+		color: #000000;
+		font-size: 12px;
+	}
+	
+	.content.side.recommended {
+		font-size: 14px;
+	}
+}
+
+
+/* Footer */
+footer {
+	background-color: black;
+	height: 70px;
+	margin: 5px auto 0;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	font-size: 12px;
+}
+
+.bottom-footer {
+	bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+	footer {
+		font-size: 16px;
+	}
+}
